@@ -1,13 +1,9 @@
 pipeline {
     agent any
-<<<<<<< HEAD
     
     tools  {
         nodejs "nodejs"
     }
-=======
-
->>>>>>> test
     environment {
         APP_NAME = 'wk-1gallery'
     }
