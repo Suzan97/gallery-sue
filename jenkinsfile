@@ -1,6 +1,9 @@
 pipeline {
     agent any
-
+    
+    tools{
+        nodejs "node"
+    }
     environment {
         APP_NAME = 'wk-1gallery'
     }
@@ -31,7 +34,7 @@ stages{
     }
     
 }
- post {
+ post('Status updates') {
         success {
             slackSend color: "good", message: "Build #${BUILD_NUMBER} ran successfully"
         }
