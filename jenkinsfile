@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     tools  {
-        nodejs "Node 19.0.1"
+        nodejs "nodejs"
     }
     environment {
         APP_NAME = 'wk-1gallery'
