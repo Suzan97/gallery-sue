@@ -28,10 +28,11 @@ stages{
     stage ('Deploy to Heroku'){
         steps{
             withCredentials([usernameColonPassword(credentialsId: 'heroku', variable: 'HEROKU_CREDENTIALS' )]){
-               sh 'git push https://${HEROKU_CREDENTIALS}@git.heroku.com/wk-1gallery.git main -f master'
+               sh 'git push https://${HEROKU_CREDENTIALS}@git.heroku.com/wk-1gallery.git -f master'
                
             }
         }
+         
     }
     
 }
