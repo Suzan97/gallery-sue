@@ -39,6 +39,7 @@ stages{
  post('Status updates') {
         success {
             slackSend color: "good", message: "Build #${BUILD_NUMBER} ran successfully"
+            message: "Visit https://git.heroku.com/wk-1gallery.git"
         }
         
         failure { 
