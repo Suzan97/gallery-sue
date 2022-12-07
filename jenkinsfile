@@ -43,6 +43,8 @@ stages{
         
         failure { 
             slackSend color: "danger", message: "Build #${BUILD_NUMBER} failed"
+            emailext body: 'Build fail',  subject: 'Message from Jenkins', to: 'suetechworks@gmail.com'
+
         }
     }
 }
